@@ -1,7 +1,6 @@
 # 生成AI翻訳
 
 ## 使用したもの
- - Streamlit
  - LangChain
  - [Ollama](https://ollama.com/)
 
@@ -39,13 +38,20 @@ Ollamaが起動していないかもしれないので、仮想環境に入っ�
 ollama list
 ```
 
-仮想環境に入っている状態で、以下のコマンドでアプリを起動する。
+
+
+仮想環境に入っている状態で、英語のテキストファイルをinput.txtという名前で同じフォルダに置く。
+そして、以下のコマンドで実行する。
 
 ```
-python3 -m streamlit run app.py
+python3 app_cli.py
 ```
 
-![スクリーンショット](images/screenshot.jpg)
+すると、output.txtという名前で、翻訳結果ができる。
+
+途中で進捗が停まったら、Ctrl+cで終了し、再度`python3 app_cli.py`すると、停めたところから再開される。
+
+![スクリーンショット](images/screenshot.png)
 
 ## 作者
 [小久保 温(こくぼ・あつし)](https://akokubo.github.io/)
