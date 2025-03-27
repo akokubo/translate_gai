@@ -48,7 +48,7 @@ python3 app_cli.py --input 原文のテキストファイル --output 翻訳を�
 
 例: この文章は、イギリスで1895年に出版された『亀がアキレスに言ったこと』という、数学を題材にしてナンセンス小説です。作者は、『不思議の国のアリス』で有名なルイス・キャロルです。
 
-![スクリーンショット](images/screenshot.png)
+![スクリーンショット](images/cli_screenshot.png)
 
 ### GUI版
 注・安定していないので、CLI版を推奨します。
@@ -56,6 +56,7 @@ python3 app_cli.py --input 原文のテキストファイル --output 翻訳を�
 ```
 python3 -m streamlit run app.py
 ```
+![スクリーンショット](images/gui_screenshot.png)
 
 ## 作者
 [小久保 温(こくぼ・あつし)](https://akokubo.github.io/)
