@@ -23,7 +23,7 @@ def parse_args():
 
 # LangChain の ChatOpenAI をローカルモデル用に設定
 llm = ChatOpenAI(
-    model_name="gemma3",
+    model_name="gemma3:4b-it-qat",
     openai_api_base="http://localhost:11434/v1",
     openai_api_key='ollama',
     temperature=0.2,
@@ -130,7 +130,7 @@ def translate_file(input_file, output_file, context, resume=False):
     translated_text = batch_translate(text, context, resume=resume)
     
     with open(output_file, "w", encoding="utf-8") as f:
-        f.write(translated_text.replace("\u3000", " "))
+        f.write(translated_text)
     
     print(f"翻訳が完了しました: {output_file}")
     if os.path.exists(PROGRESS_FILE):

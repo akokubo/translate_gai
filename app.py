@@ -16,7 +16,7 @@ TIMEOUT = 30  # 最大許容翻訳時間（秒）
 
 # LangChain の ChatOpenAI をローカルモデル用に設定
 llm = ChatOpenAI(
-    model_name="gemma3",
+    model_name="gemma3:4b-it-qat",
     openai_api_base="http://localhost:11434/v1",
     openai_api_key='ollama',
     temperature=0.2,
@@ -186,7 +186,7 @@ if uploaded_file is not None:
         # 文脈情報が入力されていれば翻訳開始
         if context.strip():
             # バッチ翻訳を実行
-            translated_text = batch_translate(text, context, resume=True).replace("\u3000", " ")
+            translated_text = batch_translate(text, context, resume=True)
         else:
             st.warning("文脈情報を入力してください。")  # 文脈情報がない場合は警告を表示
 
